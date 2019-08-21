@@ -121,6 +121,11 @@ export default {
       title: 'vvild 小野 · 雾化电子烟 V0 产品相关答疑'
     }
   },
+  head () {
+    return {
+      title: `${this.title} - 小野官方网站`
+    }
+  },
   components: {
     card,
     subHeader

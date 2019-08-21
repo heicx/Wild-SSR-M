@@ -50,6 +50,11 @@ export default {
       title: '客服中心',
     }
   },
+  head () {
+    return {
+      title: `${this.title} - 小野官方网站`
+    }
+  },
   components: {
     card,
     subHeader
