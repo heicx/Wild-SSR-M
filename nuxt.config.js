@@ -27,7 +27,7 @@ module.exports = {
   */
   loading: {
     color: 'crimson',
-    height: '1px'
+    height: '2px'
   },
 
   /*
