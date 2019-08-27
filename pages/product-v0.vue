@@ -54,7 +54,7 @@ export default {
 
 .product-wrap .product-list .item-wrap {
   position: relative;
-  padding-top: 4rem;
+  padding-top: 2.6rem;
   a {
     position: absolute;
     content: '';

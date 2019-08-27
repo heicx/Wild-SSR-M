@@ -35,7 +35,7 @@ export default {
   img {
     width: 100%;
     &:first-child {
-      padding-top: 4rem;
+      padding-top: 2.6rem;
     }
   }
 }
