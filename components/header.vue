@@ -1,6 +1,6 @@
 <template>
 	<div class="header-topbar-wrap">
-    <div class="tips"></div>
+    <!-- <div class="tips"></div> -->
 		<header class="topbar">
       <router-link class="logo" to="/"></router-link>
       <i 
@@ -8,6 +8,7 @@
         @click="changeMenu()"
       >
       </i>
+      <a href="https://xiaoyeyanju.tmall.com" class="buy-btn"></a>
 		</header>
     
     <ul
@@ -68,9 +69,27 @@ export default {
 				{
 					name: '产品',
 					alias: {
-            path: 'product'
+            path: ['product-v1', 'product-v0'],
+            subItems: [
+              {
+                name: '雾化电子烟 V1',
+                link: '/product-v1',
+                path: 'product-v1',
+              },
+              {
+                name: '雾化电子烟 V0',
+                link: '/product-v0',
+                path: 'product-v0',
+              },
+            ],
           },
-					link: '/product'
+        },
+        {
+					name: '视频中心',
+					alias: {
+            path: 'media',
+          },
+					link: '/media'
 				},
 				{
 					name: '关于我们',
@@ -196,9 +215,22 @@ export default {
     width: .85rem;
     height: .55rem;
     top: 50%;
-    right: 5%;
+    left: 5%;
     transform: translate(0, -50%);
     background-image: url(~assets/images/header/menu-btn@3x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .buy-btn {
+    position: absolute;
+    content: '';
+    width: 4.2rem;
+    height: 1.5rem;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    background-image: url(~assets/images/common/buy-btn.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -257,7 +289,7 @@ export default {
     transition: all .15s ease-in-out;
     border-bottom: 1px solid #dde0e6;
     >li {
-      width: 4rem;
+      width: 5rem;
       margin: 0 auto;
       // border-bottom: 1px solid #dde0e6;
       &:last-child {
