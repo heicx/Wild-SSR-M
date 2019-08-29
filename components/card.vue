@@ -37,8 +37,8 @@ export default {
     border-radius: 6px 6px 0 0;
     background: #f3f3f3;
     background: linear-gradient(#fff, #fbfbfb);
-    line-height: 1.5rem;
-    height: 1.5rem;
+    line-height: 1.7rem;
+    height: 1.7rem;
     box-sizing: border-box;
   }
   .card .card-list {

@@ -31,18 +31,18 @@ export default {
 
 <style lang="scss" scoped>
 .sub-header-wrap {
-  display: flex;
-  padding-top: 4.2rem;
+  padding-top: 2.6rem;
   border-bottom: 1px solid #e9ebf0;
-  height: 1.8rem;
-  line-height: 1.8rem;
+  height: 1.95rem;
+  line-height: 1.95rem;
   background: #f4f6fb;
   color: #626264;
-  text-align: center;
 }
 .sub-header-item {
+  display: inline-block;
+  width: 50%;
   position: relative;
-  flex: 1;
+  text-align: center;
   font-size: .7rem;
   &.active {
     color: #ff0000;

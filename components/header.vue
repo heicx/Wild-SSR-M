@@ -215,7 +215,7 @@ export default {
     width: .85rem;
     height: .55rem;
     top: 50%;
-    left: 5%;
+    left: 1rem;
     transform: translate(0, -50%);
     background-image: url(~assets/images/header/menu-btn@3x.png);
     background-repeat: no-repeat;
@@ -225,15 +225,15 @@ export default {
   .buy-btn {
     position: absolute;
     content: '';
-    width: 4.2rem;
-    height: 1.5rem;
+    width: 3.38rem;
+    height: 1.26rem;
     top: 50%;
-    right: 2%;
+    right: 1rem;
     transform: translateY(-50%);
-    background-image: url(~assets/images/common/buy-btn.jpg);
+    background-image: url(~assets/images/common/buy-btn@3x.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
   }
 }
 
@@ -243,18 +243,17 @@ export default {
   transition: all .35s ease-in-out;
   transform: translate3d(0, -380px, 0);
   text-align: center;
-  background: #f4f6fb;
-  color: #6f7484;
+  background: #f7f7f7;
+  color: #63686e;
   font-size: .65rem;
-  border-bottom: 1px solid #dde0e6;
+  border-bottom: 1px solid #dadbde;
   box-shadow: 0px 4px 12px -6px #ccc;
   z-index: 10;
   &.active {
     transform: translate3d(0, 0, 0);
   }
   >li {
-    margin: 0 2rem;
-    line-height: 2rem;
+    margin: 0 32%;
     &:last-child .item-name {
       border-bottom: none;
     }
@@ -264,7 +263,10 @@ export default {
   }
   .item-name, .sub-item-name {
     position: relative;
-    border-bottom: 1px solid #dde0e6;
+    color: #95979b;
+    height: 2rem;
+    line-height: 2rem;
+    border-bottom: 1px solid #dadbde;
     &:after {
       position: absolute;
       content: '';

@@ -36,14 +36,11 @@
   </div>
   <div class="video-wrap" :class="{'active': videoShowStatus}">
     <div class="video-content">
-      <video 
-        v-if="isCDN" :src="videoUrl" controls
-        webkit-playsinline="true"
-        x-webkit-airplay="true"
-        playsinline="true"
-        x5-video-player-type="h5"
-        x5-video-orientation="h5"
-        x5-video-player-fullscreen="true"
+      <video
+        v-if="isCDN && videoShowStatus"
+        :src="videoUrl"
+        controls
+        ref="videoEle"
         poster="https://static.vvild.cn/resources/img/cover.png"
       ></video>
       <iframe v-if="!isCDN" width='100%' :src='videoUrl' frameborder='0 allowfullscreen'></iframe>
@@ -121,6 +118,10 @@ export default {
         this.isCDN = false;
         this.videoUrl = this.videos[name].youkuUrl || this.videos['media-4'].cdnUrl;
       }
+
+      setTimeout(_ => {
+        this.$refs.videoEle.play();
+      });
       
       this.videoShowStatus = !this.videoShowStatus;
     },
@@ -198,8 +199,10 @@ export default {
     background-image: -webkit-image-set(url(~assets/images/common/close_btn.png) 1x,url(~assets/images/common/close_btn@2x.png) 2x);
   }
   video {
+    position: absolute;
     width: 100%;
-    height: 100%;
+    top: 48%;
+    transform: translateY(-50%);
   }
 }
 
@@ -211,21 +214,6 @@ export default {
   padding-top: .5rem;
   overflow: hidden;
   li {
-    // position: relative;
-    // &:after {
-    //   position: absolute;
-    //   content: '';
-    //   top: 50%;
-    //   left: 50%;
-    //   transform: translate(-50%, -50%);
-    //   width: 25px;
-    //   height: 25px;
-    //   background-repeat: no-repeat;
-    //   background-position: center;
-    //   background-size: cover;
-    //   background-image: url(~assets/images/media/play-btn@3x.png);
-    //   background-image: -webkit-image-set(url(~assets/images/media/play-btn@3x.png) 1x,url(~assets/images/media/play-btn@3x.png) 2x);
-    // }
     img {
       width: 100%;
       height: 100%;
