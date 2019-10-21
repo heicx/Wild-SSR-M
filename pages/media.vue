@@ -104,8 +104,6 @@ export default {
       title: '视频中心 - 小野官方网站'
     }
   },
-  mounted() {
-  },
   methods: {
     playVideo (name) {
       // 1566878399000

@@ -85,8 +85,6 @@ export default {
       this.videoShowStatus = !this.videoShowStatus;
     },
   },
-  components: {
-  },
 }
 </script>
 

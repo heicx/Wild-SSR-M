@@ -105,7 +105,7 @@ import card from '../../components/card'
 
 export default {
   layout: 'common',
-  data() {
+  data () {
     return {
       list: [
         {

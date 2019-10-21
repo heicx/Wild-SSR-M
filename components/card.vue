@@ -7,9 +7,8 @@
 
 <script>
 export default {
-	data() {
-    return {
-    }
+	data () {
+    return {}
   },
   props: {
     title: String

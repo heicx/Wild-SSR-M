@@ -6,7 +6,7 @@
       "env": {
         "NODE_ENV": "production"
       },
-			"cwd": "/Project/github/Wild-SSR/",
+			"cwd": "/Project/Wild-SSR/",
 			"exec_mode": "cluster",
 			"instances": 2,
 			"watch": false,

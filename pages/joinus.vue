@@ -97,7 +97,7 @@ import card from '../components/card';
 
 export default {
   layout: 'common',
-  data() {
+  data () {
     return {
       title: '加入我们',
       list: [
@@ -117,10 +117,6 @@ export default {
     return {
       title: `${this.title} - 小野官方网站`
     }
-  },
-  mounted() {
-  },
-  methods: {
   },
   components: {
     subHeader,

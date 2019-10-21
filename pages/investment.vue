@@ -11,20 +11,13 @@
 <script>
 export default {
   layout: 'common',
-  data() {
-    return {
-    }
+  data () {
+    return {}
   },
   head () {
     return {
       title: '招商加盟 - 小野官方网站'
     }
-  },
-  mounted() {
-  },
-  methods: {
-  },
-  components: {
   },
 }
 </script>

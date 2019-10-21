@@ -9,12 +9,12 @@
 import appHeader from '../components/header.vue';
 
 export default {
-  data() {
+  data () {
     return {}
   },
   computed: {
   },
-  created() {
+  created () {
   },
   components: {
     appHeader,
