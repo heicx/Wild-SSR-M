@@ -31,15 +31,16 @@ export default {
 
 <style lang="scss" scoped>
 .sub-header-wrap {
-  padding-top: 2.6rem;
+  padding-top: 4.5rem;
   border-bottom: 1px solid #e9ebf0;
-  height: 1.95rem;
-  line-height: 1.95rem;
+  height: 2rem;
+  line-height: 2rem;
   background: #f4f6fb;
   color: #626264;
 }
 .sub-header-item {
-  display: inline-block;
+  display: inline;
+  float: left;
   width: 50%;
   position: relative;
   text-align: center;

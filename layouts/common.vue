@@ -2,11 +2,13 @@
   <div id="app" class="app-wrap">
     <app-header></app-header>
     <nuxt />
+    <app-footer></app-footer>
 	</div>
 </template>
 
 <script>
 import appHeader from '../components/header.vue';
+import appFooter from '../components/footer.vue';
 
 export default {
   data () {
@@ -18,6 +20,7 @@ export default {
   },
   components: {
     appHeader,
+    appFooter,
   },
 }
 </script>

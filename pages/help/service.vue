@@ -38,8 +38,8 @@ export default {
     return {
       list: [
         {
-          name: 'V0 产品答疑',
-          link: '/help/question'
+          name: '公司介绍',
+          link: '/aboutus',
         },
         {
           name: '客服中心',

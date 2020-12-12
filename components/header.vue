@@ -1,6 +1,9 @@
 <template>
 	<div class="header-topbar-wrap">
     <!-- <div class="tips"></div> -->
+    <div class="tips-wrap">
+      <p class="tips">特别提醒：本产品含有尼古丁，未成年人禁止使用，非吸烟者请勿尝试</p>
+    </div>
 		<header class="topbar">
       <router-link class="logo" to="/"></router-link>
       <i 
@@ -8,7 +11,7 @@
         @click="changeMenu()"
       >
       </i>
-      <a href="https://xiaoyeyanju.tmall.com" class="buy-btn"></a>
+      <!-- <a href="https://xiaoyeyanju.tmall.com" class="buy-btn"></a> -->
 		</header>
     
     <ul
@@ -65,77 +68,110 @@ export default {
             path: 'index',
           },
 					link: '/'
-				},
-				{
-					name: '产品',
-					alias: {
-            path: ['product-v1', 'product-v0'],
-            subItems: [
-              {
-                name: '雾化电子烟 V1',
-                link: '/product-v1',
-                path: 'product-v1',
-              },
-              {
-                name: '雾化电子烟 V0',
-                link: '/product-v0',
-                path: 'product-v0',
-              },
-            ],
-          },
         },
         {
-					name: '视频中心',
-					alias: {
-            path: 'media',
+          name: '专卖店计划',
+          alias: {
+            path: 'entityshop',
           },
-					link: '/media'
-				},
-				{
+					link: '/entityshop'
+        },
+        {
+          name: '招商加盟',
+          alias: {
+            path: 'investment',
+          },
+					link: '/investment'
+        },
+        {
+          name: '用户口碑',
+          alias: {
+            path: 'praises',
+          },
+					link: '/praises'
+        },
+        {
+          name: '小野店主故事',
+          alias: {
+            path: 'stories',
+          },
+					link: '/stories'
+        },
+				// {
+				// 	name: '产品',
+				// 	alias: {
+        //     path: ['product-v1', 'product-v0'],
+        //     subItems: [
+        //       {
+        //         name: '雾化电子烟 V1',
+        //         link: '/product-v1',
+        //         path: 'product-v1',
+        //       },
+        //       {
+        //         name: '雾化电子烟 V0',
+        //         link: '/product-v0',
+        //         path: 'product-v0',
+        //       },
+        //     ],
+        //   },
+        // },
+        // {
+				// 	name: '视频中心',
+				// 	alias: {
+        //     path: 'media',
+        //   },
+				// 	link: '/media'
+				// },
+				// {
+				// 	name: '关于我们',
+				// 	alias: {
+        //     path: ['aboutus', 'joinus'],
+        //     subItems: [
+        //       {
+        //         name: '公司介绍',
+        //         link: '/aboutus',
+        //         path: 'aboutus',
+        //       },
+        //       {
+        //         name: '加入我们',
+        //         link: '/joinus',
+        //         path: 'joinus',
+        //       },
+        //     ],
+        //   },
+        // },
+        // {
+				// 	name: '招商加盟',
+				// 	alias: {
+        //     path: ['entityshop', 'investment'],
+        //     subItems: [
+        //       {
+        //         name: '招商加盟',
+        //         link: '/investment',
+        //         path: 'investment',
+        //       },
+        //       {
+        //         name: '专卖店计划',
+        //         link: '/entityshop',
+        //         path: 'entityshop',
+        //       }
+        //     ],
+        //   },
+        // },
+        {
 					name: '关于我们',
 					alias: {
-            path: ['aboutus', 'joinus'],
+            path: ['aboutus', 'help-service'],
             subItems: [
+              // {
+              //   name: 'V0 产品答疑',
+              //   link: '/help/question',
+              //   path: 'help-question',
+              // },
               {
                 name: '公司介绍',
                 link: '/aboutus',
-                path: 'aboutus',
-              },
-              {
-                name: '加入我们',
-                link: '/joinus',
-                path: 'joinus',
-              },
-            ],
-          },
-        },
-        {
-					name: '招商加盟',
-					alias: {
-            path: ['entityshop', 'investment'],
-            subItems: [
-              {
-                name: '招商加盟',
-                link: '/investment',
-                path: 'investment',
-              },
-              {
-                name: '专卖店计划',
-                link: '/entityshop',
-                path: 'entityshop',
-              }
-            ],
-          },
-        },
-        {
-					name: '帮助与支持',
-					alias: {
-            path: ['help-question', 'help-service'],
-            subItems: [
-              {
-                name: 'V0 产品答疑',
-                link: '/help/question',
-                path: 'help-question',
+                path: 'aboutus'
               },
               {
                 name: '客服中心',
@@ -158,11 +194,12 @@ export default {
       }
     },
     changeMenu: function(items, link) {
+      console.log(link)
       if (!items) {
         this.showMenu = !this.showMenu;
       }
 
-      if (link !== '') {
+      if (!!link) {
         this.$router.push({ path: link });
       }
     }
@@ -178,23 +215,24 @@ export default {
   z-index: 30;
 }
 
-.tips {
+.tips-wrap {
   position: relative;
-  width: 100%;
-  height: 1.5rem;
-  background-image: url(~assets/images/header/tips@3x.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: 20;
+  background: #000;
+  z-index: 5;
+  .tips {
+    color: #fff;
+    font-size: 10px;
+    padding: 8px 0;
+    transform: scale(0.9);
+  }
 }
 
 .topbar {
   position: relative;
   width: 100%;
   height: 2.6rem;
-  background: #f4f6fb;
-  border-bottom: 1px solid #dde0e6;
+  background: #000;
+  border-bottom: 1px solid #000;
   z-index: 20;
   .logo {
     position: absolute;
@@ -241,19 +279,17 @@ export default {
   position: absolute;
   width: 100%;
   transition: all .35s ease-in-out;
-  transform: translate3d(0, -380px, 0);
+  transform: translate3d(0, -420px, 0);
   text-align: center;
-  background: #f7f7f7;
-  color: #63686e;
+  background: #000;
+  color: #b3b3b3;
   font-size: .65rem;
-  border-bottom: 1px solid #dadbde;
-  box-shadow: 0px 4px 12px -6px #ccc;
-  z-index: 10;
+  z-index: 1;
   &.active {
     transform: translate3d(0, 0, 0);
   }
   >li {
-    margin: 0 32%;
+    margin: 0 12%;
     &:last-child .item-name {
       border-bottom: none;
     }
@@ -263,25 +299,26 @@ export default {
   }
   .item-name, .sub-item-name {
     position: relative;
-    color: #95979b;
-    height: 2rem;
-    line-height: 2rem;
-    border-bottom: 1px solid #dadbde;
+    color: #b3b3b3;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(77, 77, 77, .7);
     &:after {
       position: absolute;
       content: '';
-      width: .42rem;
-      height: .42rem;
-      top: 48%;
+      width: .4rem;
+      height: .4rem;
+      top: 50%;
       transform: translate(0, -50%);
-      margin-left: .25rem;
+      right: 0;
       background: url(~assets/images/header/arrow@3x.png) center no-repeat;
       background-position: 0 0;
       background-size: cover;
     }
     &.active {
       &:after {
-        background-position: 0 -.42rem;
+        background-position: 0 -.4rem;
       }
     }
   }
@@ -289,9 +326,9 @@ export default {
     height: 0px;
     opacity: 0;
     transition: all .15s ease-in-out;
-    border-bottom: 1px solid #dde0e6;
+    border-bottom: 1px solid rgba(77, 77, 77, .7);
     >li {
-      width: 5rem;
+      width: 10rem;
       margin: 0 auto;
       // border-bottom: 1px solid #dde0e6;
       &:last-child {
@@ -302,7 +339,7 @@ export default {
       }
     }
     &.active {
-      height: 4rem;
+      height: 4.8rem;
       opacity: 1;
     }
   }

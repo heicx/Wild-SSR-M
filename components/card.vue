@@ -30,7 +30,7 @@ export default {
     font-weight: bold;
     color: #7e7e7e;
     text-align: left;
-    padding-left: 1rem;
+    padding-left: .6rem;
     box-shadow: 0 3px 8px -6px rgba(0,0,0,.1);
     border-bottom: 1px solid #dcdcdc;
     border-radius: 6px 6px 0 0;

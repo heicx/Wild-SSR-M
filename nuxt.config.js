@@ -41,6 +41,7 @@ module.exports = {
   plugins: [
     '~plugins/route',
     { src: '~plugins/ba.js', ssr: false },
+    { src: '~plugins/vue-awesome-swiper', mode: 'client'}
   ],
 
   /*
