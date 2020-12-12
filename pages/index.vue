@@ -133,7 +133,7 @@ export default {
 }
 
 .product-v1-wrap .product-v1-list .video-banner {
-  margin-top: 4.2rem;
+  margin-top: 4rem;
 }
 
 .video-wrap {

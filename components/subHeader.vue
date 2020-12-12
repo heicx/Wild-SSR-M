@@ -31,7 +31,7 @@ export default {
 
 <style lang="scss" scoped>
 .sub-header-wrap {
-  padding-top: 4.5rem;
+  padding-top: 4.3rem;
   border-bottom: 1px solid #e9ebf0;
   height: 2rem;
   line-height: 2rem;
